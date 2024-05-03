@@ -1,0 +1,152 @@
+.general {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  width: 100%;
+  background-color: rgba(43, 41, 41, .4);
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 3s;
+}
+
+.home-txt {
+  width: 80%;
+  margin: 30px auto;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 6s;
+}
+
+.big-txt {
+  margin-bottom: 40px;
+}
+
+.welcome-txt {
+  line-height: 27px;
+}
+
+.take-test-bx {
+  width: 27%;
+  height: 44px;
+  margin: auto;
+  margin-bottom: 40px;
+  transition: .8s;
+  animation: fadeIn 9s;
+}
+
+.take-test-bx:hover {
+  width: 30%;
+}
+
+.take-test {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(15, 119, 198);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .8s;
+}
+
+.take-test:hover {
+  letter-spacing: 2px;
+}
+
+@media (max-width: 3800px) {
+  .general {
+    width: 50%;
+  }
+}
+
+@media (max-width: 2660px) {
+  .general {
+    width: 60%;
+  }
+
+  .home {
+    height: 500px;
+  }
+
+  .home-txt {
+    width: 70%;
+    height: 170px;
+    margin: 45px auto;
+  }
+
+  .big-txt {
+    font-size: 50px;
+    font-family: cursive;
+    letter-spacing: 6px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 2750px) {
+  .home {
+    height: 400px;
+    border-radius: 30px;
+    padding: 20px 0;
+  }
+
+  .home-txt {
+    width: 70%;
+    height: 130px;
+    margin: 25px auto;
+  }
+
+  .big-txt {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .take-test-bx {
+    width: 27%;
+    height: 35px;
+  }
+
+  .take-test-bx:hover {
+    width: 30%;
+  }
+
+  .take-test {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .take-test:hover {
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .general {
+    width: 85%;
+  }
+
+  .take-test-bx {
+    width: 51%;
+  }
+}

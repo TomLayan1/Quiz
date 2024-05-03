@@ -1,0 +1,165 @@
+.general-bx {
+  width: 60%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.quiz-bx {
+  width: 100%;
+  background: rgba(19, 19, 19, 0.4);
+  padding: 30px;
+  margin-top: 45px;
+  border: 1px solid rgb(30, 108, 226);
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  box-shadow: 0 0 10px rgb(30, 108, 226);
+}
+
+.active-question-no {
+  color: white;
+  margin-bottom: 10px;
+  animation: fadeIn 5s;
+}
+
+.question-option-bx {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.question {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 23px;
+  animation: fadeIn 10s;
+}
+
+.option-bx {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 20px 0 0 0;
+}
+
+.option {
+  width: 42%;
+  border: 1px solid white;
+  padding: 14px 19px;
+  margin-bottom: 35px;
+  color: white;
+  border: 1px solid rgb(30, 108, 226);
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgb(30, 108, 226);
+  cursor: pointer;
+}
+
+.option1,
+.option2 {
+  animation: slideFromLeft 3s;
+}
+
+.option3,
+.option4 {
+  animation: slideFromRight 3s;
+}
+
+.selected {
+  background-color: rgba(38, 114, 227, 0.2);
+}
+
+.btn-bx {
+  width: 60%;
+  height: 34px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prev-btn,
+.next-btn,
+.grey-btn,
+.submit-btn {
+  width: 40%;
+  height: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.prev-btn,
+.next-btn,
+.submit-btn,
+.play-again {
+  background: rgb(7, 52, 136);
+}
+
+.grey-btn {
+  background: rgb(134, 134, 134);
+  cursor: not-allowed;
+}
+
+.result-bx {
+  width: 50%;
+  margin: auto;
+  /* margin-top: 200px; */
+  padding: 30px;
+  border: 1px solid rgb(30, 108, 226);
+  box-shadow: 0 0 10px rgb(30, 108, 226);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.score-bx {
+  background: rgb(30, 108, 226);
+  ;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.score {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+.play-again {
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.play-again-bx {
+  width: 40%;
+  height: 34px;
+  margin-top: 30px;
+}
