@@ -1,5 +1,10 @@
+// import { nanoid } from 'nanoid'
+
+// const isSelected = nanoid();
+
 export const questions = [
   {
+    isCorrect: false,
     question: 'What is the capital of Nigeria What is the capital of Nigeria?',
     choices: [
       'Abuja',
@@ -10,6 +15,7 @@ export const questions = [
     correctAnswer: 'Abuja'
   },
   {
+    isCorrect: false,
     question: 'How many states are there in Nigeria?',
     choices: [
       26,
@@ -20,6 +26,7 @@ export const questions = [
     correctAnswer: 36
   },
   {
+    isCorrect: false,
     question: 'How many days make a week',
     choices: [
       4,
@@ -30,6 +37,7 @@ export const questions = [
     correctAnswer: 7
   },
   {
+    isCorrect: false,
     question: 'Which of the following is used in React.js to increase performance?',
     choices: [
       'Virtual DOM',
@@ -40,6 +48,7 @@ export const questions = [
     correctAnswer: 'Virtual DOM'
   },
   {
+    isCorrect: false,
     question: '5What is the device is required for internet connection?',
     choices: [
       'Server-side framework',

@@ -44,11 +44,6 @@
   transition: .8s;
   animation: fadeIn 9s;
 }
-
-.take-test-bx:hover {
-  width: 30%;
-}
-
 .take-test {
   width: 100%;
   height: 100%;
@@ -61,10 +56,6 @@
   border-radius: 5px;
   cursor: pointer;
   transition: .8s;
-}
-
-.take-test:hover {
-  letter-spacing: 2px;
 }
 
 @media (max-width: 3800px) {
@@ -125,19 +116,10 @@
     width: 27%;
     height: 35px;
   }
-
-  .take-test-bx:hover {
-    width: 30%;
-  }
-
   .take-test {
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 2px;
-  }
-
-  .take-test:hover {
-    letter-spacing: 4px;
   }
 }
 

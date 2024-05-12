@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Question.css'
 import { questions } from '../../db'
 import { InitialResult } from '../../db'
@@ -18,41 +18,48 @@ const Question = () => {
   const [showResult, setShowResult] = useState(false)
 
   // destructured the questions properties
-  const {question, choices, correctAnswer} = questions[questionIndex];
+  const {correctAnswer} = questions[questionIndex];
+  const [quizQuestion, setQuizQuestion] = useState(questions[questionIndex])
+  console.log(quizQuestion);
 
-
-  // the function is use to select options, compare the selected option to correctAnswer and update score
-  const pickAnswer = (e, choice) => {
-    // update selected option
-    setSelectedOption(choice)
-      setResult(prevResult => {
-      if ( choice === correctAnswer  ) {
-        return { ...prevResult, score: prevResult.score + 1, correctAnswers: prevResult.correctAnswers + 1 }
+  
+  const checkAnswer = (e, choice) => {
+    setSelectedOption(choice);
+    setQuizQuestion(prevQuestion => {
+      if (choice === correctAnswer) {
+        return {...prevQuestion, isCorrect: true}
       }
       else{
-        return  { ...prevResult, wrongAnswers: prevResult.wrongAnswers + 1}
+        return {...prevQuestion, isCorrect: false}
       }
-
     })
   }
+
  
   // function for the next button
   const handleNext = (e, choice) => {
-    if (questionIndex < questions.length - 1) {
-      setQuestionIndex(prevIndex => prevIndex + 1)
-    }
+    setQuestionIndex(prevIndex => prevIndex + 1);
+    setQuizQuestion(questions[questionIndex + 1]); // Update quizQuestion state with the next question
+    setSelectedOption(null); // Reset selectedOption state when moving to the next question
   }
 
   // function for the prev button
   const handlePrev = () => {
     if(questionIndex > 0) {
       setQuestionIndex(questionIndex - 1)
+      setQuizQuestion(questions[questionIndex - 1]); // Update quizQuestion state with the next question
     }
   }
 
   // function for the submit button
   const handleSubmit = () => {
     setShowResult(true)
+  }
+
+  // function for the play again button
+  const playAgain = () => {
+    setShowResult(false);
+    setQuestionIndex(0);
   }
 
   return (
@@ -63,15 +70,15 @@ const Question = () => {
             The number of question to be answered is length of the questions array 
         */}
           <p className='active-question-no'>{questionIndex + 1}/{questions.length}</p>
-          <hr/>
+          <hr className='line'/>
           <div className='question-option-bx'>
             {/* Call the destructured question */}
-            <p className='question'>{question}</p>
+            <p className='question'>{quizQuestion.question}</p>
             <div className='option-bx'>
               {/* Map through the the destructured choices and return a jsx of all the choices */}
-              {choices.map((choice, index) => {
+              {quizQuestion.choices.map((choice, index) => {
                 return (
-                  <div onClick={(e)=>pickAnswer(e, choice)} key={index} id={index} className={`option option${index + 1} ${selectedOption === choice ? 'selected' :  '' }`}>{choice}</div>
+                  <div onClick={(e)=>checkAnswer(e, choice)} key={index} id={index} className={`option option${index + 1} ${selectedOption === choice ? 'selected' :  '' }`}>{choice}</div>
                 )
               })}
             </div>
@@ -94,7 +101,7 @@ const Question = () => {
             <p className='score'>{result.score}</p>
           </div>
           <div className='play-again-bx'>
-            <button className='play-again'>Play Again</button>
+            <button onClick={playAgain} className='play-again'>Play Again</button>
           </div>
         </div>
       }
