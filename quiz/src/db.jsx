@@ -1,11 +1,9 @@
 // import { nanoid } from 'nanoid'
 
-// const isSelected = nanoid();
-
-export const questions = [
+export const data = [
   {
     isCorrect: false,
-    question: 'What is the capital of Nigeria What is the capital of Nigeria?',
+    question: 'What is the capital of Nigeria?',
     choices: [
       'Abuja',
       'Lagos',
@@ -27,7 +25,7 @@ export const questions = [
   },
   {
     isCorrect: false,
-    question: 'How many days make a week',
+    question: 'How many days make a week?',
     choices: [
       4,
       5,
@@ -49,7 +47,7 @@ export const questions = [
   },
   {
     isCorrect: false,
-    question: '5What is the device is required for internet connection?',
+    question: 'What device is required for internet connection?',
     choices: [
       'Server-side framework',
       'User Interface framework',
@@ -61,7 +59,7 @@ export const questions = [
 ]
 
 export const InitialResult = {
-  score: 0,
+  totalScore: 0,
   correctAnswers: 0,
   wrongAnswers: 0
 }

@@ -108,7 +108,6 @@
 .result-bx {
   width: 50%;
   margin: auto;
-  /* margin-top: 200px; */
   padding: 30px;
   border: 1px solid rgb(30, 108, 226);
   box-shadow: 0 0 10px rgb(30, 108, 226);
@@ -126,9 +125,8 @@
 
 .score-bx {
   background: rgb(30, 108, 226);
-  ;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   display: flex;
   align-items: center;
   border-radius: 50%;
@@ -220,7 +218,7 @@
 
 @media (max-width: 375px) {
   .quiz-bx {
-    height: 80%;
+    height: auto;
     padding: 18px;
     margin-top: 47px;
   }
@@ -244,7 +242,7 @@
 
 @media (max-width: 360px) {
   .quiz-bx {
-    height: 85%;
+    height: auto;
     padding: 18px;
   }
 
